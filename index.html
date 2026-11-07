@@ -294,7 +294,7 @@
   const SUPPORT_URL = "https://buymeacoffee.com/hitoyaku";  // Buy Me a Coffee
   const LINKS = [
     { label: "サポート窓口", url: "https://docs.google.com/forms/d/e/1FAIpQLSd2Bh0dpxDJJLnhp_3KE8c98m2WuuYm-qyo0eNTHtVjpnZo_Q/viewform" },
-    { label: "プライバシーポリシー", url: "" },
+    { label: "プライバシーポリシー", url: "/privacy/" },
     { label: "開発ログ（note）", url: "" }
   ];
   // shots: [ファイル, 画面の説明]。url に App Store のURLを入れると「App Storeで見る」になる。soon: true で「近日公開」。
@@ -416,7 +416,7 @@
   const sslot = document.getElementById("support-slot");
   if (SUPPORT_URL) sslot.append(ext(SUPPORT_URL, "Buy Me a Coffee で応援する", "btn"));
   const linksEl = document.getElementById("links");
-  LINKS.forEach(l => linksEl.append(el("li", {}, [l.url ? ext(l.url, l.label) : el("span", {}, [l.label + "（準備中）"])])));
+  LINKS.forEach(l => linksEl.append(el("li", {}, [l.url ? (l.url.startsWith("/") ? el("a", { href: l.url }, [l.label]) : ext(l.url, l.label)) : el("span", {}, [l.label + "（準備中）"])])));
 
   // ---- reveal on scroll ----
   const targets = document.querySelectorAll("[data-reveal]");
