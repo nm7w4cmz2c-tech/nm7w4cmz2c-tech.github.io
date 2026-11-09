@@ -5,26 +5,29 @@
 <title>プライバシーポリシー｜ひとやく（HITOYAKU）</title>
 <meta name="description" content="ひとやく（HITOYAKU）のアプリとウェブサイトのプライバシーポリシーです。">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6efe3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#191612" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap">
 <style>
   /* トップページ（/）と同じ色・文字。和紙のように静かな読みもののページ */
   :root {
-    --bg: #f3f3ef; --surface: #fbfbf8; --fg: #16201b; --muted: #5f6a64; --line: #d6d8d1;
-    --accent: #1f5a3a; --accent-fg: #f6f6f1;
+    --bg: #EADFCB; --surface: #F5EEE2; --fg: #2A2118; --muted: #62574A; --line: #D3C4AA;
+    --accent: #7A4A24; --accent-fg: #F5EEE2;
     --font-display: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
-    --font-body: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", system-ui, sans-serif;
+    --font-body: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", system-ui, sans-serif;
+    --fw: 400;
     color-scheme: light;
   }
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) { --bg: #0f1311; --surface: #151a17; --fg: #e9ebe6; --muted: #9aa49e; --line: #2a312d; --accent: #8fc7a5; --accent-fg: #0f1311; color-scheme: dark; }
+    :root:not([data-theme="light"]) { --bg: #1E1C1A; --surface: #282522; --fg: #F4EFE7; --muted: #C8BFB1; --line: #4A433B; --accent: #E3B47C; --accent-fg: #1E1C1A; --fw: 500; color-scheme: dark; }
   }
-  :root[data-theme="dark"] { --bg: #0f1311; --surface: #151a17; --fg: #e9ebe6; --muted: #9aa49e; --line: #2a312d; --accent: #8fc7a5; --accent-fg: #0f1311; color-scheme: dark; }
+  :root[data-theme="dark"] { --bg: #1E1C1A; --surface: #282522; --fg: #F4EFE7; --muted: #C8BFB1; --line: #4A433B; --accent: #E3B47C; --accent-fg: #1E1C1A; --fw: 500; color-scheme: dark; }
   * { box-sizing: border-box; }
   body {
     margin: 0; background: var(--bg); color: var(--fg);
-    font-family: var(--font-body); font-size: 15px; line-height: 2; letter-spacing: 0.04em;
+    font-family: var(--font-body); font-weight: var(--fw); font-size: 15px; line-height: 2; letter-spacing: 0.04em;
     padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); padding-bottom: 56px;
   }
   .wrap { max-width: 760px; margin-inline: auto; }
