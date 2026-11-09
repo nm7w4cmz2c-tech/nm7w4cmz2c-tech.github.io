@@ -66,6 +66,8 @@
   .mail:hover { background: var(--fg); color: var(--bg); }
   footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 0.8125rem; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
   footer a { text-decoration: none; }
+  footer ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; }
+  footer li + li { margin-top: 0; }
 </style>
 </head>
 <body>
@@ -194,7 +196,7 @@
 
   <footer>
     <span>© 2026 HITOYAKU（ひとやく）</span>
-    <a href="/">hitoyaku.com</a>
+    <ul><li><a href="/">hitoyaku.com</a></li><li><a href="/privacy/" aria-current="page">プライバシーポリシー</a></li><li><a href="/support/">サポート</a></li></ul>
   </footer>
 </div>
 </body>
