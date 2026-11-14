@@ -136,7 +136,9 @@
   .about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: clamp(28px, 6vw, 88px); align-items: start; }
   .about .body { display: grid; gap: 22px; }
   .about .lede { font-family: var(--font-display); font-size: 1.125rem; letter-spacing: 0.1em; }
-  .meanings { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0; }
+  .meanings { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; margin: 0; }
+  .meanings div { grid-column: span 2; }
+  .meanings div:nth-child(4) { grid-column: 2 / span 2; }
   .meanings div { background: var(--card); border-radius: 14px; padding: 16px 14px; display: grid; gap: 2px; }
   .meanings dt { font-family: var(--font-display); font-size: 1.3rem; letter-spacing: 0.1em; }
   .meanings dd { margin: 0; font-size: 0.75rem; color: var(--muted); line-height: 1.75; }
@@ -292,6 +294,8 @@
   }
   @media (max-width: 400px) {
     .meanings { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .meanings div, .meanings div:nth-child(4) { grid-column: auto; }
+    .meanings div:nth-child(5) { grid-column: 1 / -1; }
     .hero-side .actions .btn { width: 100%; }
     .works li { grid-template-columns: 56px minmax(0, 1fr); column-gap: 14px; }
     .works .ic { --s: 56px; }
@@ -332,14 +336,13 @@
           <h2 id="about-h">ひとやくについて</h2>
         </div>
         <div class="body" data-reveal>
-          <p class="lede">名前にこめた、六つの意味。</p>
+          <p class="lede">名前にこめた、五つの意味。</p>
           <dl class="meanings">
             <div><dt>一役</dt><dd>誰かの困りごとに、一役買う</dd></div>
             <div><dt>人の役</dt><dd>人の役に立つものを作る</dd></div>
             <div><dt>火</dt><dd>胸の中の火を絶やさない</dd></div>
             <div><dt>焼く</dt><dd>使える形になるまで焼き上げる</dd></div>
             <div><dt>日と役</dt><dd>毎日の役に立つ道具であること</dd></div>
-            <div><dt>一約</dt><dd>使う人と交わす、一つの約束</dd></div>
           </dl>
           <p class="closing">至らない点もあるかと思います。お気づきの点やご意見があれば、ぜひお寄せください。ご指導ご鞭撻をいただけると幸いです。</p>
         </div>
